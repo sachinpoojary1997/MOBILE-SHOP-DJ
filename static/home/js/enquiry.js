@@ -85,7 +85,7 @@ enquiryForm.addEventListener("submit", function(event) {
 
     if(isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && isProductValid) {
         console.log("All data is valid");
-        fetch('http://127.0.0.1:8000/product-enquiry', {
+        fetch('/product-enquiry', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

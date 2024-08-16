@@ -1,7 +1,6 @@
-console.log("check out")
 
 async function buyNow(id){
-const response = await fetch(`http://localhost:8000/products/create-order/${id}`)
+const response = await fetch(`/products/create-order/${id}`)
 console.log(response)
 if (response.status === 200) {
 const orderDetails =  await response.json()
@@ -12,7 +11,7 @@ intitializePayment(orderDetails)
 
 async function handlePaymentSuccess(data) {
     console.log("payment success",data)
-    const response = await fetch(`http://localhost:8000/products/payment-verification`,{
+    const response = await fetch(`/products/payment-verification`,{
         body:JSON.stringify(data),
         method:"POST",
         headers:{

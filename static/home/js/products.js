@@ -1,4 +1,4 @@
-fetch("http://localhost:8000/products/").then (function(response){
+fetch("/products/").then (function(response){
     return response.json();
 }).then(function(response){
     console.log(response);
