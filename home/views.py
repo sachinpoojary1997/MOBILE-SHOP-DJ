@@ -81,7 +81,7 @@ def products(request):
     return JsonResponse(products_from_db,safe=False)"""
     productCursor = Product.objects.all()
     page = request.GET.get('page', 1)
-    paginator = Paginator(productCursor, 3)
+    paginator = Paginator(productCursor, 4)
 
     try:
         objects = paginator.page(page)
